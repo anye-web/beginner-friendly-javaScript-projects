@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css">
+    <style>
+        body {
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background: #111;
+        }
+        
+        .jumbotron {
+            padding: 30px;
+            background: orange;
+            color: #fff;
+        }
+        
+        .text-giant {
+            font-size: 30px;
+            text-align: right;
+            padding-top: 20px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="jumbotron">
+        <h2>how much does pie cost?</h2>
+        <form>
+            <div class="form-group">
+                <label for="quantity">Quantity :
+                    <span class="label label-primary   quantity-label">1</span>
+                </label>
+                <input type="range" id="quantity" class="form-control" name="quantity" value="1" min="1" max="10" step="1">
+            </div>
+            <div class="form-group">
+                <label for="price">price</label>
+                <input type="text" id="price" class="form-control" name="price" value="30">
+            </div>
+
+        </form>
+        <div class="text-right text-giant" id="total"></div>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+
+</html>
