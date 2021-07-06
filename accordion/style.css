@@ -1,0 +1,45 @@
+body {
+    background: #ccc;
+}
+
+ul {
+    margin-bottom: 0;
+}
+
+.accordion {
+    background: #fff;
+    border-radius: 5px;
+    padding: 30px;
+    margin-top: 30px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.37);
+}
+
+.question {
+    border-top: 2px solid #eee;
+    padding-top: 20px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    color: #c00c00;
+}
+
+.fa {
+    transition: 0.5s all ease-in;
+}
+
+.answer {
+    /* height: 0; */
+    /* overflow: hidden; */
+    display: none;
+    padding: 20px;
+    /* transition: 5s all ease-in; */
+}
+
+.accordion li.open .question .fa {
+    transform: rotate(180deg);
+}
+
+.accordion li.open .answer {
+    display: block;
+}
