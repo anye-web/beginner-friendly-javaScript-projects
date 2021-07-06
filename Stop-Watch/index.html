@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stop || Watch</title>
+
+    <!-- bootstrap Css -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css">
+
+    <style>
+        body {
+            background: #444;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        
+        .jumbotron {
+            background: #D6D2C4;
+            padding: 40px;
+            border-radius: 20px;
+        }
+        
+        .timer {
+            font-size: 90px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="jumbotron text-center">
+        <!-- timer -->
+        <div class="timer">
+            <span class="minutes">00</span>:<span class="seconds">00</span>
+        </div>
+        <!-- timer buttons -->
+        <div class="timer-buttons">
+            <button class="btn btn-lg btn-success" data-action="start">Start</button>
+            <button class="btn btn-lg btn-danger" data-action="stop">Stop</button>
+            <div class="mt-3">
+                <button class="btn  btn-link btn-block" data-action="reset">Reset</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+
+</html>
