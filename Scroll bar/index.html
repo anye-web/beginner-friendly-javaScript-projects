@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Animated || Scroll</title>
+    <!-- bootstrap css -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css">
+</head>
+<style>
+    body {
+        background: #ccc;
+        padding: 30px 0;
+    }
+    
+    .content {
+        min-height: 3000px;
+        padding: 30px;
+        line-height: 1.5;
+        font-size: 18px;
+        background: #fff;
+    }
+    
+    .scroll-bar {
+        position: fixed;
+        top: 0;
+        left: 0;
+        height: 5px;
+        background: #1ce;
+        transition: 0.5s all ease;
+    }
+    
+    .num {
+        position: fixed;
+        top: 5px;
+        left: 2px;
+        font-size: 16px;
+        font-weight: bold;
+        transition: 0.3s all ease;
+    }
+</style>
+
+<body>
+    <div class="scroll-bar"></div>
+    <div class="num"></div>
+    <div class="container">
+        <div class="content">
+            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Odit dolores natus omnis dolore illum mollitia error maxime eveniet impedit veritatis. Nisi libero voluptate ad dolorem sint dolore dolor voluptatibus, illum, omnis ut molestias? Repellendus
+                laboriosam rem dolor minima cum voluptates neque, cupiditate earum, deserunt velit itaque modi quis non expedita.</p>
+        </div>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+
+</html>

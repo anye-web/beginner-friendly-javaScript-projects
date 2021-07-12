@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>accordion review</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <!-- Style -->
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap');
+        * {
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Poppins', sans-serif;
+        }
+        
+        .container {
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 30px;
+            background: linear-gradient(45deg, #E251D5, #4B0C5A);
+        }
+        
+        .accordion {
+            padding: 30px;
+            background: #F4DFEB;
+            border-radius: 10px;
+            width: 100%;
+        }
+        
+        .question {
+            display: flex;
+            justify-content: space-between;
+            padding: 10px 0;
+            border-top: 1px solid #ccc;
+            color: #4B0C5A;
+            cursor: pointer;
+        }
+        
+        .anwser {
+            padding: 10px;
+            border-left: 4px solid #4B0C5A;
+            transition: 1s all cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            display: none;
+        }
+        
+        .icon {
+            transition: .6s all ease-in-out;
+        }
+        
+        .accordion .accord.open .icon {
+            transform: rotate(180deg);
+        }
+        
+        .accordion .accord.open .anwser {
+            display: block;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="accordion">
+            <div class="accord open">
+                <div class="question">
+                    <h2>Is the a free trial?</h2>
+                    <span class="icon fa fa-chevron-down">     </span>
+                </div>
+                <div class="anwser">
+                    <p>A wonderful serenity has taken possession of my entire soul, like these sweet mornings of spring which I enjoy with my whole heart. I am alone, and feel the charm of existence in this spot, which was created for the</p>
+                </div>
+            </div>
+
+            <div class="accord">
+                <div class="question">
+                    <h2>How many percent do i get ?</h2>
+                    <span class="icon fa fa-chevron-down"></span>
+                </div>
+                <div class="anwser">
+                    <p>A wonderful serenity Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusantium assumenda hic corporis nobis eius ducimus doloremque quos nemo, distinctio libero, at rerum illum repellendus neque magni aspernatur doloribus
+                        numquam corrupti amet. Ipsum, laudantium sit. Ad, fuga voluptatibus? Architecto possimus totam consequatur ut earum. Iure asperiores sequi perferendis cumque ratione. Obcaecati. has taken possession of my entire soul, like these
+                        sweet mornings of spring which I enjoy with my whole heart. I am alone, and feel the charm of existence in this spot, which was created for the</p>
+
+                </div>
+            </div>
+
+            <div class="accord">
+                <div class="question">
+                    <h2>When is the start date?</h2>
+                    <span class="icon fa fa-chevron-down"></span>
+                </div>
+                <div class="anwser">
+                    <p>A wonderful serenity has taken possession of my entire soul, like these sweet mornings of spring which I enjoy with my whole heart. I am alone, and feel the charm of existence in this spot, which was created for the</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- script js -->
+    <script>
+        // Ui Vars
+        const questions = document.querySelectorAll('.question');
+        const answer = document.querySelectorAll('.anwser');
+        const items = document.querySelectorAll('.accord');
+
+
+        // Event listener
+        questions.forEach(question => question.addEventListener('click', toggleAccordion));
+
+        // Creeating Function
+        function toggleAccordion() {
+            const thisItem = this.parentNode;
+
+            items.forEach(item => {
+                if (thisItem === item) {
+                    thisItem.classList.toggle('open');
+                    return;
+                }
+                item.classList.remove('open');
+            });
+            console.log(thisItem);
+        }
+    </script>
+</body>
+
+</html>
